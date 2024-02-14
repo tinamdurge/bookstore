@@ -29,7 +29,7 @@
       <div class="box1">
         <p>Books <span>(128 items)</span></p>
         <div class="dropdown">
-          <select name="abc" id="">
+          <select name="sortOptions" (change)="sortBooks($event)">
             <option value="sort" selected>Sort by relevance</option>
             <option value="Price:Lowtohigh">Price: Low to high</option>
             <option value="Price:Hightolow">Price: High to low</option>
@@ -60,9 +60,9 @@
     <div class="card-wrapper">
         <ul>
           <li *ngFor="let book of books.result">
-            <div class="container">
+            <a class="container" href='store/book/{{book._id}}'>
               <div class="card">
-                <img src="../../../../assets/book.jpg" alt="" />
+                <img src="../../../../assets/Book image.png" alt="" />
                 <div>
                   <p>{{book.bookName}}</p>
                   <p class="author">by {{book.author}}</p>
@@ -73,7 +73,7 @@
                   <p>Rs {{book.discountPrice}} <span class="cross">Rs {{book.price}}</span></p>
                 </div>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
       </div>
