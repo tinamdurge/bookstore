@@ -1,0 +1,110 @@
+<!-- <style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+    }
+  </style> -->
+  <!-- <header class="head">
+    <nav class="nav">
+      <div class="logo">
+        <img src="../../../../assets/book-icon.png" alt="" />
+        <h3>Bookstore</h3>
+      </div>
+      <div class="search">
+        <input type="text" name="" id="" placeholder="search..." />
+      </div>
+      <div class="login">
+        <div class="icon">login</div>
+        <div class="cart">Cart</div>
+      </div>
+    </nav>
+  </header> -->
+  
+  <div class="content" role="main">
+    <div class="container">
+      <div class="box1">
+        <p>Books <span>(128 items)</span></p>
+        <div class="dropdown">
+          <select name="abc" id="">
+            <option value="sort" selected>Sort by relevance</option>
+            <option value="Price:Lowtohigh">Price: Low to high</option>
+            <option value="Price:Hightolow">Price: High to low</option>
+            <option value="NewestArrivals">Newest Arrivals</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- <ul>
+      <li *ngFor = "let book of books.result ">
+        <div class="container">
+          <div class="card">
+            <img src="../../../../assets/book.jpg" alt="" />
+            <div>
+              <p>{{book.bookName}}</p>
+              <p class="author">by {{book.author}}</p>
+              <div class="rating">
+                <p class="star">4.5 <span>★</span></p>
+                <p class="num">(20)</p>
+              </div>
+              <p>Rs {{book.discountPrice}} <span class="cross">Rs {{book.price}}</span></p>
+            </div>
+          </div>
+
+        </div>
+      </li>
+    </ul> -->
+    <div class="card-wrapper">
+        <ul>
+          <li *ngFor="let book of books.result">
+            <div class="container">
+              <div class="card">
+                <img src="../../../../assets/book.jpg" alt="" />
+                <div>
+                  <p>{{book.bookName}}</p>
+                  <p class="author">by {{book.author}}</p>
+                  <div class="rating">
+                    <p class="star">4.5 <span>★</span></p>
+                    <p class="num">(20)</p>
+                  </div>
+                  <p>Rs {{book.discountPrice}} <span class="cross">Rs {{book.price}}</span></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <section class="pagination">
+        <ul class="pagination pagination-sm">
+          <li class="">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">Previous</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">.</a></li>
+          <li class="page-item"><a class="page-link" href="#">.</a></li>
+          <li class="page-item"><a class="page-link" href="#">.</a></li>
+          <li class="page-item"><a class="page-link" href="#">18</a></li>
+          
+          <li class="">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">Next</span>
+            </a>
+          </li>
+        </ul>
+      
+  
+      </section>
+    <!-- <footer class="footer">
+      <p>Copyright 2020, Bookstore Private Limited. All Rights Reserved</p>
+  </footer> -->
+  </div>
+  
